@@ -46,17 +46,11 @@ const About = () => {
 
   const education = [
     {
-      degree: "Degree Name",
-      institution: "Institution Name",
-      duration: "2012 - 2016",
+      degree: "Computer Science and Engineering",
+      institution: "Lehigh Univeristy",
+      duration: "2023 - 2027",
       description: "This is a placeholder for your education description. Include your major, achievements, and any relevant information.",
-    },
-    {
-      degree: "Degree Name",
-      institution: "Institution Name",
-      duration: "2010 - 2012",
-      description: "This is a placeholder for your education description. Include your major, achievements, and any relevant information.",
-    },
+    }
   ];
 
   return (
@@ -112,7 +106,7 @@ const About = () => {
               </p>
               <div className="flex gap-4">
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/chris-posivak-954a96298" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
