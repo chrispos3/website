@@ -20,4 +20,8 @@ export default defineConfig(({ mode }) => ({
     },
   },
   base: '/website/',
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+  }
 }));
