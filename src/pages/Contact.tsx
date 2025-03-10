@@ -65,9 +65,9 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">Contact Me</h1>
-                <p className="text-xl">
-                  TODO
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4">Contact Me</h1>
+                <p className="text-lg mb-8">
+                  Feel free to reach out! Whether you have a project in mind, want to discuss opportunities, or just want to say hello, I'm always happy to connect.
                 </p>
               </motion.div>
             </div>
