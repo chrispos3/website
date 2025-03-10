@@ -1,25 +1,37 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Layout from "../components/Layout";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+interface CursorPositions {
+  name: number;
+  email: number;
+  message: number;
+}
 
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
 
-  const [cursorPositions, setCursorPositions] = useState({
+  const [cursorPositions, setCursorPositions] = useState<CursorPositions>({
     name: 0,
     email: 0,
     message: 0,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", formData);
@@ -28,7 +40,6 @@ const Contact = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    // Update cursor position to be after the last character
     setCursorPositions(prev => ({
       ...prev,
       [name]: value.length,
