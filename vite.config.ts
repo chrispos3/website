@@ -23,5 +23,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'dist',
     sourcemap: true,
+    assetsDir: 'assets',
+    emptyOutDir: true,
   }
 }));
