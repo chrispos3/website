@@ -1,4 +1,3 @@
-
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
@@ -10,7 +9,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#c0c0c0]">
       <Navbar />
       <motion.main 
         className="flex-grow"

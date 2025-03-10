@@ -1,52 +1,156 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 240 10% 3.9%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 210 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0px;
   }
 
   * {
     @apply border-border selection:bg-primary/5;
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", "Segoe UI", sans-serif;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-[#c0c0c0] text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABdJREFUeNpi+P//PwM6YGLAAuCCjAAEGABpXQjXQKqWXQAAAABJRU5ErkJggg==");
   }
 
   html {
     @apply scroll-smooth;
+  }
+
+  /* Windows 98 specific styles */
+  .win98-button {
+    @apply border-2 border-[#ffffff] border-b-[#808080] border-r-[#808080] bg-[#c0c0c0] px-2 py-1 text-sm font-bold;
+  }
+
+  .win98-button:active {
+    @apply border-[#808080] border-b-[#ffffff] border-r-[#ffffff];
+  }
+
+  .win98-window {
+    @apply border-2 border-[#ffffff] border-b-[#808080] border-r-[#808080] bg-[#c0c0c0];
+  }
+
+  .win98-titlebar {
+    @apply bg-[#000080] text-white px-2 py-1 flex items-center justify-between;
+  }
+
+  .win98-titlebar-text {
+    @apply text-sm font-bold;
+  }
+
+  .win98-titlebar-buttons {
+    @apply flex gap-1;
+  }
+
+  .win98-titlebar-button {
+    @apply w-4 h-4 flex items-center justify-center text-white text-xs font-bold;
+  }
+
+  .win98-content {
+    @apply p-4;
+  }
+
+  /* Windows 98 Terminal styles */
+  .win98-terminal {
+    @apply bg-black text-green-400 font-mono text-sm p-4;
+    font-family: "Consolas", "Courier New", monospace;
+  }
+
+  .win98-terminal-input {
+    @apply bg-transparent border-none text-green-400 font-mono outline-none w-full block mt-1;
+    font-family: "Consolas", "Courier New", monospace;
+    caret-color: transparent; /* Hide default cursor */
+  }
+
+  .win98-terminal-prompt {
+    @apply text-green-400 block;
+  }
+
+  .win98-terminal .win98-button {
+    @apply text-black;
+  }
+
+  .win98-terminal-input-container {
+    @apply relative;
+  }
+
+  .win98-terminal-cursor {
+    @apply absolute bg-green-400;
+    width: 8px;
+    height: 16px;
+    animation: blink 1s step-end infinite;
+    display: none;
+  }
+
+  .win98-terminal-input-container:focus-within .win98-terminal-cursor {
+    display: block;
+  }
+
+  .win98-terminal-line {
+    @apply mb-2;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* Windows 98 icons */
+  .win98-icon {
+    @apply w-8 h-8 flex items-center justify-center;
+  }
+
+  .win98-icon img {
+    @apply w-full h-full object-contain;
+  }
+
+  /* Windows 98 scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-4;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-[#c0c0c0];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#808080] border-2 border-[#ffffff] border-b-[#808080] border-r-[#808080];
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#a0a0a0];
   }
 }
 
