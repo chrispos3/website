@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import windowsIcon from "./assets/windows_icons/windows.ico";
+import userCardIcon from "./assets/windows_icons/user_card.ico";
+import userComputerIcon from "./assets/windows_icons/user_computer.ico";
+import worldPhoneIcon from "./assets/windows_icons/world_phonereceiver.ico";
+import windowsButtonIcon from "./assets/windows_icons/windows_button.ico";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,10 +28,10 @@ const Navbar = () => {
   }, [location]);
 
   const navLinks = [
-    { title: "Home", path: "/" },
-    { title: "About", path: "/about" },
-    { title: "Projects", path: "/projects" },
-    { title: "Contact", path: "/contact" },
+    { title: "Home", path: "/", icon: windowsIcon },
+    { title: "About", path: "/about", icon: userCardIcon },
+    { title: "Projects", path: "/projects", icon: userComputerIcon },
+    { title: "Contact", path: "/contact", icon: worldPhoneIcon },
   ];
 
   return (
@@ -37,8 +42,11 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50"
     >
       <div className="win98-window">
-        <div className="win98-titlebar">
-          <span className="win98-titlebar-text">Navigation</span>
+        <div className="win98-titlebar flex items-center">
+          <div className="flex-1 flex items-center">
+            <img src={windowsButtonIcon} alt="Navigation" className="w-4 h-4 mr-2" />
+            <span className="win98-titlebar-text">Navigation</span>
+          </div>
           <div className="win98-titlebar-buttons">
             <button className="win98-titlebar-button">_</button>
             <button className="win98-titlebar-button">□</button>
@@ -47,7 +55,8 @@ const Navbar = () => {
         </div>
         <div className="win98-content">
           <div className="container mx-auto flex items-center justify-between">
-            <Link to="/" className="text-xl font-bold tracking-tight">
+            <Link to="/" className="text-xl font-bold tracking-tight flex items-center">
+              <img src={windowsIcon} alt="" className="w-5 h-5 mr-2" />
               <span className="text-[#000080]">Chris Posivak</span>
             </Link>
             
@@ -56,10 +65,11 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`win98-button ${
+                  className={`win98-button flex items-center ${
                     location.pathname === link.path ? "bg-[#000080] text-white" : ""
                   }`}
                 >
+                  <img src={link.icon} alt="" className="w-4 h-4 mr-2" />
                   {link.title}
                 </Link>
               ))}
@@ -67,24 +77,11 @@ const Navbar = () => {
             
             <div className="md:hidden">
               <button 
-                className="win98-button"
+                className="win98-button flex items-center"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="3" y1="12" x2="21" y2="12" />
-                  <line x1="3" y1="6" x2="21" y2="6" />
-                  <line x1="3" y1="18" x2="21" y2="18" />
-                </svg>
+                <img src={windowsButtonIcon} alt="" className="w-4 h-4 mr-2" />
+                Menu
               </button>
             </div>
           </div>
@@ -101,8 +98,11 @@ const Navbar = () => {
             className="md:hidden absolute top-full left-0 right-0 z-50"
           >
             <div className="win98-window mx-4 mt-2">
-              <div className="win98-titlebar">
-                <span className="win98-titlebar-text">Menu</span>
+              <div className="win98-titlebar flex items-center">
+                <div className="flex-1 flex items-center">
+                  <img src={windowsButtonIcon} alt="Menu" className="w-4 h-4 mr-2" />
+                  <span className="win98-titlebar-text">Menu</span>
+                </div>
                 <div className="win98-titlebar-buttons">
                   <button className="win98-titlebar-button">_</button>
                   <button className="win98-titlebar-button">□</button>
@@ -115,10 +115,11 @@ const Navbar = () => {
                     <Link
                       key={link.path}
                       to={link.path}
-                      className={`win98-button text-center ${
+                      className={`win98-button text-center flex items-center justify-center ${
                         location.pathname === link.path ? "bg-[#000080] text-white" : ""
                       }`}
                     >
+                      <img src={link.icon} alt="" className="w-4 h-4 mr-2" />
                       {link.title}
                     </Link>
                   ))}

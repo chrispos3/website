@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Layout from "../components/Layout";
+import userCardIcon from "../components/assets/windows_icons/user_card.ico";
+import toolsGearIcon from "../components/assets/windows_icons/tools_gear.ico";
+import userComputerIcon from "../components/assets/windows_icons/user_computer.ico";
+import userCalendarIcon from "../components/assets/windows_icons/user_calendar.ico";
 
 const About = () => {
   useEffect(() => {
@@ -58,15 +62,18 @@ const About = () => {
       <section className="pt-32 pb-8 px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">About Me</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={userCardIcon} alt="About" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">About Me</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
                 <button className="win98-titlebar-button">×</button>
               </div>
             </div>
-            <div className="win98-content">
+            <div className="win98-content p-8">
               <motion.div
                 className="text-center max-w-3xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
@@ -87,15 +94,18 @@ const About = () => {
       <section className="py-8 px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">Who I Am</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={userCardIcon} alt="Who I Am" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">Who I Am</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
                 <button className="win98-titlebar-button">×</button>
               </div>
             </div>
-            <div className="win98-content">
+            <div className="win98-content p-8">
               <div className="flex flex-col md:flex-row gap-12 items-center">
                 <motion.div 
                   className="flex-1"
@@ -124,16 +134,18 @@ const About = () => {
                       href="https://www.linkedin.com/in/chris-posivak-954a96298" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="win98-button"
+                      className="win98-button flex items-center"
                     >
+                      <img src={userCardIcon} alt="" className="w-4 h-4 mr-2" />
                       LinkedIn
                     </a>
                     <a 
                       href="https://github.com" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="win98-button"
+                      className="win98-button flex items-center"
                     >
+                      <img src={userComputerIcon} alt="" className="w-4 h-4 mr-2" />
                       GitHub
                     </a>
                   </div>
@@ -148,15 +160,18 @@ const About = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">Skills</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={toolsGearIcon} alt="Skills" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">Skills</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
                 <button className="win98-titlebar-button">×</button>
               </div>
             </div>
-            <div className="win98-content">
+            <div className="win98-content p-8">
               <motion.div 
                 className="text-center mb-12"
                 initial={{ opacity: 0, y: 20 }}
@@ -180,15 +195,18 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="win98-titlebar">
-                      <span className="win98-titlebar-text">{skill.name}</span>
+                    <div className="win98-titlebar flex items-center">
+                      <div className="flex-1 flex items-center">
+                        <img src={toolsGearIcon} alt="" className="w-4 h-4 mr-2" />
+                        <span className="win98-titlebar-text">{skill.name}</span>
+                      </div>
                       <div className="win98-titlebar-buttons">
                         <button className="win98-titlebar-button">_</button>
                         <button className="win98-titlebar-button">□</button>
                         <button className="win98-titlebar-button">×</button>
                       </div>
                     </div>
-                    <div className="win98-content">
+                    <div className="win98-content p-4">
                       <div className="w-full bg-[#c0c0c0] border-2 border-[#808080] border-b-[#ffffff] border-r-[#ffffff]">
                         <div 
                           className="h-2 bg-[#000080]"
@@ -208,15 +226,18 @@ const About = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">Work Experience</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={userComputerIcon} alt="Experience" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">Work Experience</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
                 <button className="win98-titlebar-button">×</button>
               </div>
             </div>
-            <div className="win98-content">
+            <div className="win98-content p-8">
               <motion.div 
                 className="text-center mb-12"
                 initial={{ opacity: 0, y: 20 }}
@@ -240,15 +261,18 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="win98-titlebar">
-                      <span className="win98-titlebar-text">{exp.position}</span>
+                    <div className="win98-titlebar flex items-center">
+                      <div className="flex-1 flex items-center">
+                        <img src={userComputerIcon} alt="" className="w-4 h-4 mr-2" />
+                        <span className="win98-titlebar-text">{exp.position}</span>
+                      </div>
                       <div className="win98-titlebar-buttons">
                         <button className="win98-titlebar-button">_</button>
                         <button className="win98-titlebar-button">□</button>
                         <button className="win98-titlebar-button">×</button>
                       </div>
                     </div>
-                    <div className="win98-content">
+                    <div className="win98-content p-4">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-2">
                         <span className="font-medium">{exp.company}</span>
                         <span className="hidden sm:inline">•</span>
@@ -268,15 +292,18 @@ const About = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">Education</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={userCalendarIcon} alt="Education" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">Education</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
                 <button className="win98-titlebar-button">×</button>
               </div>
             </div>
-            <div className="win98-content">
+            <div className="win98-content p-8">
               <motion.div 
                 className="text-center mb-12"
                 initial={{ opacity: 0, y: 20 }}
@@ -300,15 +327,18 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="win98-titlebar">
-                      <span className="win98-titlebar-text">{edu.degree}</span>
+                    <div className="win98-titlebar flex items-center">
+                      <div className="flex-1 flex items-center">
+                        <img src={userCalendarIcon} alt="" className="w-4 h-4 mr-2" />
+                        <span className="win98-titlebar-text">{edu.degree}</span>
+                      </div>
                       <div className="win98-titlebar-buttons">
                         <button className="win98-titlebar-button">_</button>
                         <button className="win98-titlebar-button">□</button>
                         <button className="win98-titlebar-button">×</button>
                       </div>
                     </div>
-                    <div className="win98-content">
+                    <div className="win98-content p-4">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-2">
                         <span className="font-medium">{edu.institution}</span>
                         <span className="hidden sm:inline">•</span>

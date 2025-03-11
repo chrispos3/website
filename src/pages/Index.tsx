@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import FormalChris from "../components/ui/formalChris";
+import windowsIcon from "../components/assets/windows_icons/windows.ico";
+import userCardIcon from "../components/assets/windows_icons/user_card.ico";
+import worldPhoneIcon from "../components/assets/windows_icons/world_phonereceiver.ico";
+import writeCardPhone from "../components/assets/windows_icons/write_card_phone.ico";
+import userComputerIcon from "../components/assets/windows_icons/user_computer.ico";
 
 const Index = () => {
   useEffect(() => {
@@ -21,8 +26,11 @@ const Index = () => {
       <section className="pt-32 pb-16 px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">Welcome to Chris's Portfolio</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={windowsIcon} alt="Welcome" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">Welcome to Chris's Portfolio</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
@@ -31,33 +39,23 @@ const Index = () => {
             </div>
             <div className="win98-content">
               <div className="flex flex-col md:flex-row items-center gap-12">
-                <div className="flex-1 space-y-6">
-                  <motion.div
+                <div className="flex-1">
+                  <motion.h1 
+                    className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                  >
-                    <span className="win98-button inline-block mb-4">
-                      Welcome to my portfolio
-                    </span>
-                  </motion.div>
-                  
-                  <motion.h1 
-                    className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
                   >
                     Hi, I'm <span className="text-[#000080]">Chris Posivak</span>
                   </motion.h1>
                   
                   <motion.p 
-                    className="text-xl"
+                    className="text-lg md:text-xl mb-8"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
                   >
-                    A sophomore Computer Science and Engineering major at Lehigh University
+                    A software developer passionate about creating engaging web experiences.
                   </motion.p>
                   
                   <motion.div 
@@ -68,14 +66,16 @@ const Index = () => {
                   >
                     <Link 
                       to="/projects"
-                      className="win98-button"
+                      className="win98-button flex items-center"
                     >
+                      <img src={userComputerIcon} alt="" className="w-4 h-4 mr-2" />
                       View Projects
                     </Link>
                     <Link 
                       to="/contact"
-                      className="win98-button"
+                      className="win98-button flex items-center"
                     >
+                      <img src={writeCardPhone} alt="" className="w-4 h-4 mr-2" />
                       Contact Me
                     </Link>
                   </motion.div>
@@ -101,8 +101,11 @@ const Index = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">Featured Projects</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={userComputerIcon} alt="Projects" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">Featured Projects</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
@@ -131,8 +134,11 @@ const Index = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="win98-titlebar">
-                      <span className="win98-titlebar-text">Project {index + 1}</span>
+                    <div className="win98-titlebar flex items-center">
+                      <div className="flex-1 flex items-center">
+                        <img src={userComputerIcon} alt="" className="w-4 h-4 mr-2" />
+                        <span className="win98-titlebar-text">Project {index + 1}</span>
+                      </div>
                       <div className="win98-titlebar-buttons">
                         <button className="win98-titlebar-button">_</button>
                         <button className="win98-titlebar-button">□</button>
@@ -145,12 +151,13 @@ const Index = () => {
                       </div>
                       <h3 className="text-lg font-semibold mb-2">Project Title</h3>
                       <p className="text-sm mb-4">
-                        This is a placeholder for your project description. Replace with actual details about your project.
+                        TODO
                       </p>
                       <Link
                         to="/projects"
-                        className="win98-button inline-block"
+                        className="win98-button flex items-center"
                       >
+                        <img src={userComputerIcon} alt="" className="w-4 h-4 mr-2" />
                         View Project
                       </Link>
                     </div>
@@ -166,8 +173,9 @@ const Index = () => {
                 >
                   <Link
                     to="/projects"
-                    className="win98-button"
+                    className="win98-button flex items-center inline-flex"
                   >
+                    <img src={userComputerIcon} alt="" className="w-4 h-4 mr-2" />
                     View All Projects
                   </Link>
                 </motion.div>
@@ -181,8 +189,11 @@ const Index = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">About Me</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={userCardIcon} alt="About" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">About Me</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
@@ -204,8 +215,9 @@ const Index = () => {
                   </p>
                   <Link
                     to="/about"
-                    className="win98-button"
+                    className="win98-button flex items-center"
                   >
+                    <img src={userCardIcon} alt="" className="w-4 h-4 mr-2" />
                     Read More
                   </Link>
                 </motion.div>
@@ -231,8 +243,11 @@ const Index = () => {
       <section className="py-16 px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">Contact Me</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={worldPhoneIcon} alt="Contact" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">Contact Me</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
@@ -253,8 +268,9 @@ const Index = () => {
                 </p>
                 <Link
                   to="/contact"
-                  className="win98-button"
+                  className="win98-button flex items-center inline-flex"
                 >
+                  <img src={writeCardPhone} alt="" className="w-4 h-4 mr-2" />
                   Contact Me
                 </Link>
               </motion.div>

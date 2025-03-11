@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Layout from "../components/Layout";
+import userComputerIcon from "../components/assets/windows_icons/user_computer.ico";
+import worldPhoneIcon from "../components/assets/windows_icons/world_phonereceiver.ico";
+import writeCardPhone from "../components/assets/windows_icons/write_card_phone.ico";
+import searchWebIcon from "../components/assets/windows_icons/search_web.ico";
 
 const Projects = () => {
   useEffect(() => {
@@ -30,15 +34,18 @@ const Projects = () => {
       <section className="pt-24 sm:pt-32 pb-8 sm:pb-16 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">My Projects</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={userComputerIcon} alt="Projects" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">My Projects</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
                 <button className="win98-titlebar-button">×</button>
               </div>
             </div>
-            <div className="win98-content">
+            <div className="win98-content p-8">
               <motion.div
                 className="text-center max-w-3xl mx-auto px-4 sm:px-0"
                 initial={{ opacity: 0, y: 20 }}
@@ -59,15 +66,18 @@ const Projects = () => {
       <section className="py-4 sm:py-8 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">Filter Projects</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={searchWebIcon} alt="Filter" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">Filter Projects</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
                 <button className="win98-titlebar-button">×</button>
               </div>
             </div>
-            <div className="win98-content">
+            <div className="win98-content p-4">
               <motion.div 
                 className="flex flex-wrap justify-center gap-2 sm:gap-4 px-2 sm:px-0"
                 initial={{ opacity: 0, y: 20 }}
@@ -76,34 +86,38 @@ const Projects = () => {
               >
                 <button
                   onClick={() => setFilter("all")}
-                  className={`win98-button text-sm sm:text-base ${
+                  className={`win98-button text-sm sm:text-base flex items-center ${
                     filter === "all" ? "bg-[#000080] text-white" : ""
                   }`}
                 >
+                  <img src={searchWebIcon} alt="" className="w-4 h-4 mr-2" />
                   All
                 </button>
                 <button
                   onClick={() => setFilter("web")}
-                  className={`win98-button text-sm sm:text-base ${
+                  className={`win98-button text-sm sm:text-base flex items-center ${
                     filter === "web" ? "bg-[#000080] text-white" : ""
                   }`}
                 >
+                  <img src={searchWebIcon} alt="" className="w-4 h-4 mr-2" />
                   Web
                 </button>
                 <button
                   onClick={() => setFilter("app")}
-                  className={`win98-button text-sm sm:text-base ${
+                  className={`win98-button text-sm sm:text-base flex items-center ${
                     filter === "app" ? "bg-[#000080] text-white" : ""
                   }`}
                 >
+                  <img src={searchWebIcon} alt="" className="w-4 h-4 mr-2" />
                   App
                 </button>
                 <button
                   onClick={() => setFilter("design")}
-                  className={`win98-button text-sm sm:text-base ${
+                  className={`win98-button text-sm sm:text-base flex items-center ${
                     filter === "design" ? "bg-[#000080] text-white" : ""
                   }`}
                 >
+                  <img src={searchWebIcon} alt="" className="w-4 h-4 mr-2" />
                   Design
                 </button>
               </motion.div>
@@ -125,8 +139,11 @@ const Projects = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 layout
               >
-                <div className="win98-titlebar">
-                  <span className="win98-titlebar-text text-sm sm:text-base">{project.title}</span>
+                <div className="win98-titlebar flex items-center">
+                  <div className="flex-1 flex items-center">
+                    <img src={userComputerIcon} alt="" className="w-4 h-4 mr-2" />
+                    <span className="win98-titlebar-text text-sm sm:text-base">{project.title}</span>
+                  </div>
                   <div className="win98-titlebar-buttons">
                     <button className="win98-titlebar-button">_</button>
                     <button className="win98-titlebar-button">□</button>
@@ -139,7 +156,8 @@ const Projects = () => {
                   </div>
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-base sm:text-lg font-semibold">{project.title}</h3>
-                    <span className="win98-button text-xs">
+                    <span className="win98-button text-xs flex items-center">
+                      <img src={searchWebIcon} alt="" className="w-3 h-3 mr-1" />
                       {project.category}
                     </span>
                   </div>
@@ -150,8 +168,9 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="win98-button inline-block text-sm sm:text-base"
+                    className="win98-button inline-block text-sm sm:text-base flex items-center"
                   >
+                    <img src={userComputerIcon} alt="" className="w-4 h-4 mr-2" />
                     View Project
                   </a>
                 </div>
@@ -165,15 +184,18 @@ const Projects = () => {
       <section className="py-8 sm:py-16 px-4 sm:px-6">
         <div className="container mx-auto">
           <div className="win98-window">
-            <div className="win98-titlebar">
-              <span className="win98-titlebar-text">Have a Project in Mind?</span>
+            <div className="win98-titlebar flex items-center">
+              <div className="flex-1 flex items-center">
+                <img src={worldPhoneIcon} alt="Contact" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">Have a Project in Mind?</span>
+              </div>
               <div className="win98-titlebar-buttons">
                 <button className="win98-titlebar-button">_</button>
                 <button className="win98-titlebar-button">□</button>
                 <button className="win98-titlebar-button">×</button>
               </div>
             </div>
-            <div className="win98-content">
+            <div className="win98-content p-8">
               <motion.div 
                 className="max-w-3xl mx-auto text-center px-4 sm:px-0"
                 initial={{ opacity: 0, y: 20 }}
@@ -187,8 +209,9 @@ const Projects = () => {
                 </p>
                 <a
                   href="/contact"
-                  className="win98-button text-sm sm:text-base"
+                  className="win98-button text-sm sm:text-base flex items-center inline-flex"
                 >
+                  <img src={writeCardPhone} alt="" className="w-4 h-4 mr-2" />
                   Contact Me
                 </a>
               </motion.div>
