@@ -1,5 +1,25 @@
-// Remove Next.js imports since we're using Vite
+// Type definition for Google Analytics
+declare function gtag(command: string, event: string, params: object): void;
+
+// Configuration Constants
 const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1348832658901434399/R7zidLoEyfay6t3LrO7_EU8eXGn-N0B5EjSs9icPxw-UNzxu170jvR8t54foC1SX_daR";
+const GOOGLE_ANALYTICS_ID = "G-6SHPV37MXL"; // Replace with your Google Analytics ID
+
+// Google Analytics Event Tracking
+async function trackFormSubmission(formData: { name: string; email: string; message: string }) {
+  try {
+    // Google Analytics 4 Event
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'form_submission', {
+        'event_category': 'Contact',
+        'event_label': 'Contact Form',
+        'value': 1
+      });
+    }
+  } catch (error) {
+    console.error('Error tracking form submission:', error);
+  }
+}
 
 async function getIPAddress() {
   try {
@@ -16,6 +36,9 @@ export async function sendToDiscord(formData: { name: string; email: string; mes
   try {
     const timestamp = new Date().toLocaleString();
     const ipAddress = await getIPAddress();
+
+    // Track form submission
+    await trackFormSubmission(formData);
 
     const messageContent = {
       username: "Contact Form Bot",
