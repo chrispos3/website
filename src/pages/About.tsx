@@ -18,41 +18,29 @@ const About = () => {
   };
 
   const skills = [
-    { name: "TODO", level: 90 },
-    { name: "TODO", level: 85 },
-    { name: "TODO", level: 80 },
-    { name: "TODO", level: 75 },
-    { name: "TODO", level: 70 },
-    { name: "TODO", level: 65 },
+    { name: "Java", level: 90 },
+    { name: "Python", level: 75 },
+    { name: "UI/UX Design", level: 80 },
+    { name: "CSS", level: 60 },
+    { name: "HTML", level: 60 },
+    { name: "JavaScript", level: 65 },
   ];
 
   const experiences = [
     {
-      position: "TODO",
-      company: "TODO",
-      duration: "TODO",
-      description: "TODO",
-    },
-    {
-      position: "TODO",
-      company: "TODO",
-      duration: "TODO",
-      description: "TODO",
-    },
-    {
-      position: "TODO",
-      company: "TODO",
-      duration: "TODO",
+      position: "UI/UX Design Intern",
+      company: "RevSend",
+      duration: "January 2025 - Present",
       description: "TODO",
     },
   ];
 
   const education = [
     {
-      degree: "Computer Science and Engineering",
+      degree: "Bachelor of Science",
       institution: "Lehigh University",
       duration: "2023 - 2027",
-      description: "TODO",
+      description: "Computer Science and Engineering",
     }
   ];
 

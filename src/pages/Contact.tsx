@@ -258,7 +258,7 @@ const Contact = () => {
                   <button className="win98-titlebar-button">×</button>
                 </div>
               </div>
-              <div className="win98-content flex flex-col items-center justify-center p-4">
+              <div className="win98-content flex flex-col items-center justify-center p-6">
                 <a href="mailto:chrisposivak@gmail.com" className="win98-button flex items-center">
                   <img src={writeCardPhone} alt="" className="w-4 h-4 mr-2" />
                   chrisposivak@gmail.com
@@ -278,7 +278,7 @@ const Contact = () => {
                   <button className="win98-titlebar-button">×</button>
                 </div>
               </div>
-              <div className="win98-content flex flex-col items-center justify-center p-4">
+              <div className="win98-content flex flex-col items-center justify-center p-6">
                 <div className="flex justify-center gap-4">
                   <a 
                     href="https://www.linkedin.com/in/chris-posivak-954a96298" 
@@ -314,9 +314,16 @@ const Contact = () => {
                   <button className="win98-titlebar-button">×</button>
                 </div>
               </div>
-              <div className="win98-content flex flex-col items-center justify-center p-4">
-                <p className="text-center">Trenton,</p>
-                <p className="text-center">New Jersey</p>
+              <div className="win98-content flex flex-col items-center justify-center p-6">
+                <a 
+                  href="https://www.google.com/maps?q=Trenton,+New+Jersey" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="win98-button flex items-center"
+                >
+                  <img src={worldIcon} alt="" className="w-4 h-4 mr-2" />
+                  Trenton, New Jersey
+                </a>
               </div>
             </div>
           </div>
