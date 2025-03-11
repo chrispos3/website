@@ -211,7 +211,10 @@ const Index = () => {
                 >
                   <h2 className="text-3xl font-bold tracking-tight mb-4">About Me</h2>
                   <p className="mb-6">
-                    DO LATER
+                  I am a second-year student at Lehigh University studying Computer Science and Engineering. 
+                  I am passionate about software engineering and cybersecurity. I am proficient in Java, Python, Excel, and C++, 
+                  with experience in Swift, TypeScript, JavaScript, HTML, and CSS. I enjoy learning through personal projects and 
+                  continuously developing my skills. I am currently finishing an ISC2 Cybersecurity course and plan to acquire more certifications.
                   </p>
                   <Link
                     to="/about"
