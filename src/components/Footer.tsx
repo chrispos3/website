@@ -71,9 +71,6 @@ const Footer = () => {
                     <span>Contact</span>
                   </div>
                 </h3>
-                <p className="text-sm mb-4">
-                  Feel free to reach out to me for any questions or opportunities.
-                </p>
                 <a href="mailto:chrisposivak@gmail.com" className="win98-button inline-flex items-center">
                   <img src={writeCardPhone} alt="" className="w-4 h-4 mr-2" />
                   chrisposivak@gmail.com
