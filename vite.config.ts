@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: true,
     port: 3000,
+    historyApiFallback: true,
   },
   plugins: [
     react(),
@@ -19,10 +20,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/website/',
-  preview: {
-    port: 3000,
-  },
+  base: '/',
   build: {
     outDir: 'dist',
     sourcemap: true,

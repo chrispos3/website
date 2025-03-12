@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <Router basename="/website">
+      <Router>
         <AnimatePresence mode="wait">
           <Routes>
             <Route path="/" element={<Index />} />
