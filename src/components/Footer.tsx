@@ -22,11 +22,17 @@ const Footer = () => {
             <img src={windowsButtonIcon} alt="Footer" className="w-4 h-4 mr-2" />
             <span className="win98-titlebar-text">Footer</span>
           </div>
-          <div className="win98-titlebar-buttons">
-            <button className="win98-titlebar-button">_</button>
-            <button className="win98-titlebar-button">□</button>
-            <button className="win98-titlebar-button">×</button>
-          </div>
+          <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
+              </div>
         </div>
         <div className="win98-content p-8">
           <div className="container mx-auto">

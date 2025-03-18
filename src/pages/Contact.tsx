@@ -7,6 +7,7 @@ import worldIcon from "../components/assets/windows_icons/world.ico";
 import writeCardPhone from "../components/assets/windows_icons/write_card_phone.ico";
 import windowsIcon from "../components/assets/windows_icons/windows.ico";
 import errorIcon from "../components/assets/windows_icons/eject_pc.ico";
+import terminalIcon from "../components/assets/windows_icons/console_prompt.ico";
 import { sendToDiscord } from "./api/contact";
 
 interface FormData {
@@ -219,10 +220,16 @@ const Contact = () => {
                 <img src={worldPhoneIcon} alt="Contact" className="w-4 h-4 mr-2" />
                 <span className="win98-titlebar-text">Contact Me</span>
               </div>
-              <div className="win98-titlebar-buttons">
-                <button className="win98-titlebar-button">_</button>
-                <button className="win98-titlebar-button">□</button>
-                <button className="win98-titlebar-button">×</button>
+              <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
               </div>
             </div>
             <div className="win98-content">
@@ -252,11 +259,17 @@ const Contact = () => {
                   <img src={worldPhoneIcon} alt="Email" className="w-4 h-4 mr-2" />
                   <span className="win98-titlebar-text">Email</span>
                 </div>
-                <div className="win98-titlebar-buttons">
-                  <button className="win98-titlebar-button">_</button>
-                  <button className="win98-titlebar-button">□</button>
-                  <button className="win98-titlebar-button">×</button>
-                </div>
+                <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
+              </div>
               </div>
               <div className="win98-content flex flex-col items-center justify-center p-6">
                 <a href="mailto:chrisposivak@gmail.com" className="win98-button flex items-center">
@@ -272,11 +285,17 @@ const Contact = () => {
                   <img src={worldIcon} alt="Social Media" className="w-4 h-4 mr-2" />
                   <span className="win98-titlebar-text">Social Media</span>
                 </div>
-                <div className="win98-titlebar-buttons">
-                  <button className="win98-titlebar-button">_</button>
-                  <button className="win98-titlebar-button">□</button>
-                  <button className="win98-titlebar-button">×</button>
-                </div>
+                <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
+              </div>
               </div>
               <div className="win98-content flex flex-col items-center justify-center p-6">
                 <div className="flex justify-center gap-4">
@@ -308,11 +327,17 @@ const Contact = () => {
                   <img src={worldIcon} alt="Location" className="w-4 h-4 mr-2" />
                   <span className="win98-titlebar-text">Location</span>
                 </div>
-                <div className="win98-titlebar-buttons">
-                  <button className="win98-titlebar-button">_</button>
-                  <button className="win98-titlebar-button">□</button>
-                  <button className="win98-titlebar-button">×</button>
-                </div>
+                <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
+              </div>
               </div>
               <div className="win98-content flex flex-col items-center justify-center p-6">
                 <a 
@@ -336,13 +361,19 @@ const Contact = () => {
           <div className="win98-window">
             <div className="win98-titlebar flex items-center">
               <div className="flex-1 flex items-center">
-                <img src={writeCardPhone} alt="Send Message" className="w-4 h-4 mr-2" />
+                <img src={terminalIcon} alt="Send Message" className="w-4 h-4 mr-2" />
                 <span className="win98-titlebar-text">Send Message</span>
               </div>
-              <div className="win98-titlebar-buttons">
-                <button className="win98-titlebar-button">_</button>
-                <button className="win98-titlebar-button">□</button>
-                <button className="win98-titlebar-button">×</button>
+              <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
               </div>
             </div>
             <div className="win98-terminal p-6">

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Layout from "../components/Layout";
 import userCardIcon from "../components/assets/windows_icons/user_card.ico";
+import notepad from "../components/assets/windows_icons/notepad.ico";
 import toolsGearIcon from "../components/assets/windows_icons/tools_gear.ico";
 import userComputerIcon from "../components/assets/windows_icons/user_computer.ico";
 import userCalendarIcon from "../components/assets/windows_icons/user_calendar.ico";
@@ -55,10 +56,16 @@ const About = () => {
                 <img src={userCardIcon} alt="About" className="w-4 h-4 mr-2" />
                 <span className="win98-titlebar-text">About Me</span>
               </div>
-              <div className="win98-titlebar-buttons">
-                <button className="win98-titlebar-button">_</button>
-                <button className="win98-titlebar-button">□</button>
-                <button className="win98-titlebar-button">×</button>
+              <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
               </div>
             </div>
             <div className="win98-content p-8">
@@ -84,40 +91,75 @@ const About = () => {
           <div className="win98-window">
             <div className="win98-titlebar flex items-center">
               <div className="flex-1 flex items-center">
-                <img src={userCardIcon} alt="Who I Am" className="w-4 h-4 mr-2" />
-                <span className="win98-titlebar-text">Who I Am</span>
+                <img src={notepad} alt="Who I Am" className="w-4 h-4 mr-2" />
+                <span className="win98-titlebar-text">WhoIAm.txt - Notepad</span>
               </div>
-              <div className="win98-titlebar-buttons">
-                <button className="win98-titlebar-button">_</button>
-                <button className="win98-titlebar-button">□</button>
-                <button className="win98-titlebar-button">×</button>
+              <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
               </div>
             </div>
-            <div className="win98-content p-8">
-              <div className="flex flex-col md:flex-row gap-12 items-center">
-                <motion.div 
-                  className="flex-1"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+            <div className="win98-menubar flex text-sm border-b border-gray-400 bg-[#c0c0c0] px-1 py-0.5">
+              <div className="mr-4">
+                <span className="underline">F</span>ile
+              </div>
+              <div className="mr-4">
+                <span className="underline">E</span>dit
+              </div>
+              <div className="mr-4">
+                <span className="underline">S</span>earch
+              </div>
+              <div className="mr-4">
+                <span className="underline">H</span>elp
+              </div>
+            </div>
+            <div className="win98-content p-0">
+              <div className="bg-white p-4 font-mono text-sm h-[700px] overflow-auto">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="relative aspect-square max-w-md mx-auto overflow-hidden">
-                    <div className="absolute inset-0 image-placeholder"></div>
-                  </div>
-                </motion.div>
-                
-                <motion.div 
-                  className="flex-1 space-y-6"
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-3xl font-bold tracking-tight">Who I Am</h2>
-                  <p>TODO</p>
-                  <p>TODO</p>
-                  <div className="flex gap-4">
+                  <pre className="whitespace-pre-wrap">
+{`PERSONAL PROFILE
+===============
+
+I am a passionate software developer and computer science student with a keen interest in creating innovative solutions and learning new technologies. My journey in technology is driven by curiosity and a desire to make a positive impact through code.
+
+BACKGROUND
+---------
+* Second-year Computer Science and Engineering student at Lehigh University
+* Focus on software development and cybersecurity
+* Passionate about creating engaging web experiences
+* Committed to continuous learning and professional growth
+
+INTERESTS & SPECIALIZATIONS
+-------------------------
+* Web Development
+* Software Engineering
+* Cybersecurity
+* UI/UX Design
+* Mobile App Development
+
+CURRENT FOCUS
+------------
+* Expanding full-stack development skills
+* Learning advanced cybersecurity concepts
+* Building personal projects
+* Contributing to open-source
+* Pursuing professional certifications
+
+Connect with me on:
+------------------`}</pre>
+                  <div className="mt-4 flex gap-4">
                     <a 
                       href="https://www.linkedin.com/in/chris-posivak-954a96298" 
                       target="_blank" 
@@ -153,10 +195,16 @@ const About = () => {
                 <img src={toolsGearIcon} alt="Skills" className="w-4 h-4 mr-2" />
                 <span className="win98-titlebar-text">Skills</span>
               </div>
-              <div className="win98-titlebar-buttons">
-                <button className="win98-titlebar-button">_</button>
-                <button className="win98-titlebar-button">□</button>
-                <button className="win98-titlebar-button">×</button>
+              <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
               </div>
             </div>
             <div className="win98-content p-8">
@@ -188,11 +236,17 @@ const About = () => {
                         <img src={toolsGearIcon} alt="" className="w-4 h-4 mr-2" />
                         <span className="win98-titlebar-text">{skill.name}</span>
                       </div>
-                      <div className="win98-titlebar-buttons">
-                        <button className="win98-titlebar-button">_</button>
-                        <button className="win98-titlebar-button">□</button>
-                        <button className="win98-titlebar-button">×</button>
-                      </div>
+                      <div className="flex">
+                        <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                          <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                        </button>
+                        <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                          <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                        </button>
+                        <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                          <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                        </button>
+                    </div>
                     </div>
                     <div className="win98-content p-4">
                       <div className="w-full bg-[#c0c0c0] border-2 border-[#808080] border-b-[#ffffff] border-r-[#ffffff]">
@@ -219,10 +273,16 @@ const About = () => {
                 <img src={userComputerIcon} alt="Experience" className="w-4 h-4 mr-2" />
                 <span className="win98-titlebar-text">Work Experience</span>
               </div>
-              <div className="win98-titlebar-buttons">
-                <button className="win98-titlebar-button">_</button>
-                <button className="win98-titlebar-button">□</button>
-                <button className="win98-titlebar-button">×</button>
+              <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
               </div>
             </div>
             <div className="win98-content p-8">
@@ -254,10 +314,16 @@ const About = () => {
                         <img src={userComputerIcon} alt="" className="w-4 h-4 mr-2" />
                         <span className="win98-titlebar-text">{exp.position}</span>
                       </div>
-                      <div className="win98-titlebar-buttons">
-                        <button className="win98-titlebar-button">_</button>
-                        <button className="win98-titlebar-button">□</button>
-                        <button className="win98-titlebar-button">×</button>
+                      <div className="flex">
+                        <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                          <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                        </button>
+                        <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                          <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                        </button>
+                        <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                          <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                        </button>
                       </div>
                     </div>
                     <div className="win98-content p-4">
@@ -285,10 +351,16 @@ const About = () => {
                 <img src={userCalendarIcon} alt="Education" className="w-4 h-4 mr-2" />
                 <span className="win98-titlebar-text">Education</span>
               </div>
-              <div className="win98-titlebar-buttons">
-                <button className="win98-titlebar-button">_</button>
-                <button className="win98-titlebar-button">□</button>
-                <button className="win98-titlebar-button">×</button>
+              <div className="flex">
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                </button>
+                <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                  <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                </button>
               </div>
             </div>
             <div className="win98-content p-8">
@@ -320,10 +392,16 @@ const About = () => {
                         <img src={userCalendarIcon} alt="" className="w-4 h-4 mr-2" />
                         <span className="win98-titlebar-text">{edu.degree}</span>
                       </div>
-                      <div className="win98-titlebar-buttons">
-                        <button className="win98-titlebar-button">_</button>
-                        <button className="win98-titlebar-button">□</button>
-                        <button className="win98-titlebar-button">×</button>
+                      <div className="flex">
+                        <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                          <span className="transform translate-y-[-2px] text-[#222222] font-bold">_</span>
+                        </button>
+                        <button className="w-[16px] h-[14px] flex items-center justify-center mr-[2px] bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                          <span className="transform translate-y-[-2px] text-[#222222] font-bold">□</span>
+                        </button>
+                        <button className="w-[16px] h-[14px] flex items-center justify-center bg-[#c0c0c0] border border-[#ffffff] border-r-[#424242] border-b-[#424242] text-xs leading-none">
+                          <span className="transform translate-y-[-1px] text-[#222222] font-bold">×</span>
+                        </button>
                       </div>
                     </div>
                     <div className="win98-content p-4">
